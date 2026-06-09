@@ -271,10 +271,10 @@ class MLP:
                 ix = torch.multinomial(probs,num_samples = 1).item()
                 
                 context = context[1:] + [ix]
-                out.append(ix)
+                
                 if ix == 0:
                     break
-            
+                out.append(ix)
             #print(''.join(itos[i] for i in out))
             name = ''.join(self.dataset["itos"][i] for i in out)
             names.append(name)

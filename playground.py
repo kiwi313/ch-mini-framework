@@ -1,4 +1,4 @@
-from models2 import NGramCounting,MLP
+from models import NGramCounting,MLP
 
 ngram = NGramCounting(n=3, file="names.txt")
 
